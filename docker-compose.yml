@@ -1,0 +1,9 @@
+ruban-proxy:
+    image: shipyard/docker-proxy:latest
+    container_name: ruban-proxy
+    hostname: ruban
+    restart: always
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+        - "2375:2375"
